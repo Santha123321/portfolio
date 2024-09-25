@@ -966,6 +966,40 @@ border: 1px solid red;
   color: black;
   transform:scale(1.2);
 }
+.key{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction:column;
+}
+.mds{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction:column;
+}
+.bar{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction:column;
+  display: block;
+}
+.bar h1{
+  display: none;
+}
+.bar #check{
+  display: none;
+}
+.bar.checkbtn{
+  display: none;
+}
 
 
 
@@ -1005,23 +1039,29 @@ body {
 }
 .main {
   width: 100%;
-  height: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;flex-direction: column;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px 20px;
   
 }
 .navbar {
   height: 100px;
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: white;
   position: fixed;
-display: none;
+display: block;
+z-index: 9999;
+top: 0;
   
+}
+.abi img{
+  width: 100%;
 }
 .navbar img {
   width: 10px;
@@ -1029,11 +1069,12 @@ display: none;
   flex-direction:column ;
 }
 .list {
-  width: 50%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  gap: 40px;
 }
 .butt button {
   padding: 10px 35px;border-radius: 50px;
@@ -1046,6 +1087,9 @@ display: none;
 .butt button:hover{
   color: white;
  
+}
+.butt{
+  display: none;
 }
 .butt button:hover button{
   transform: scale(1.1);
@@ -2025,4 +2069,60 @@ border: 1px solid red;
 .bee{
   flex-direction: column;
 }
+}
+.key{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 20px;
+}
+.mds{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  top: 100px;
+  padding: 20px;
+  left: -100%;
+  transition: 1s;
+  background: rgba(0, 0, 0,0.7);
+}
+.bar #check{
+  display: none;
+}
+.bar #check:checked ~ .mds{
+  left: 0;
+}
+.bar{
+  width: 100%;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.bar h1{
+  display: block;
+}
+.bar #check{
+  display: none;
+}
+.key .checkbtn{
+  display: block;
+}
+.abi {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.list a{
+  color: white;
 }
